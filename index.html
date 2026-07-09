@@ -27,6 +27,7 @@
                         primary: 'var(--primary)',
                         'primary-dark': 'var(--primary-dark)',
                         secondary: 'var(--secondary)',
+                        accent: 'var(--accent)',
                         background: 'var(--background)',
                         'background-soft': 'var(--background-soft)',
                         border: 'var(--border)',
@@ -94,9 +95,10 @@
     
     <style>
         :root {
-            --primary: #5F3BFF;       /* Roxo/azul elétrico Bubble Box */
-            --primary-dark: #4427D9;  /* Roxo escuro institucional */
-            --secondary: #FFD400;     /* Amarelo de destaque */
+            --primary: #4C1DFF;       /* Ultravioleta forte oficial */
+            --primary-dark: #2E0FB8;  /* Roxo profundo oficial */
+            --secondary: #27E6D4;     /* Verde água / turquesa */
+            --accent: #FFD400;        /* Amarelo de destaque */
             --background: #FFFFFF;
             --background-soft: #F7F8FC; /* Fundo acinzentado suave premium */
             --border: #E8EBF3;
@@ -163,7 +165,7 @@
 
         /* DESIGN SYSTEM - COMPONENTES REUTILIZÁVEIS */
         .ds-badge {
-            background-color: var(--secondary);
+            background-color: var(--accent);
             color: var(--primary-dark);
             border-radius: 999px;
             padding: 6px 16px;
@@ -187,13 +189,13 @@
             align-items: center;
             justify-content: center;
             transition: all 300ms ease;
-            box-shadow: 0 4px 6px -1px rgba(95, 59, 255, 0.2);
+            box-shadow: 0 4px 6px -1px rgba(76, 29, 255, 0.2);
             cursor: pointer;
         }
         .ds-button-primary:hover, .ds-button-primary:focus {
-            background-color: #4b2ec7; /* Escurecido ~5% do #5F3BFF */
+            background-color: #3b14cc; /* Escurecido ~5% do #4C1DFF */
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(95, 59, 255, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(76, 29, 255, 0.3);
         }
 
         .ds-button-secondary {
@@ -226,7 +228,7 @@
         }
         .ds-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(95, 59, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(76, 29, 255, 0.08);
         }
 
         .ds-image {
@@ -318,14 +320,14 @@
 </head>
 <body class="bg-white text-text font-sans antialiased">
 
-    <!-- FLOATING WHATSAPP BUTTON (ACCESSIBLE) -->
+    <!-- FLOATING WHATSAPP BUTTON (ACCESSIBLE WITH OFFICIAL NO-DISTORTION SVG) -->
     <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+inaugura%C3%A7%C3%A3o+da+Bubble+Box+Taubat%C3%A9."
        target="_blank"
        rel="noopener noreferrer"
        class="float-whatsapp"
        aria-label="Falar conosco pelo WhatsApp">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.864-9.843.002-2.63-1.023-5.101-2.886-6.968C16.586 1.875 14.111.85 11.487.85c-5.443 0-9.866 4.415-9.87 9.846-.001 1.702.454 3.361 1.317 4.816l-.991 3.616 3.704-.972zm13.628-7.734c-.3-.15-1.77-.875-2.046-.975-.276-.1-.477-.15-.677.15-.2.3-.775.975-.95 1.175-.177.2-.35.225-.65.075-1.205-.6-2.016-1.1-2.825-2.493-.215-.37.215-.345.615-1.14.06-.12.03-.225-.015-.325-.045-.1-.477-1.15-.654-1.575-.172-.413-.343-.356-.477-.362-.124-.005-.268-.005-.41-.005-.14 0-.37.052-.564.263-.194.21-1.4 1.373-1.4 3.346s1.437 3.882 1.637 4.15c.2.27 2.825 4.313 6.843 6.05.955.413 1.7.66 2.285.847.96.304 1.83.261 2.52.158.76-.113 2.33-.95 2.658-1.87.33-.92.33-1.7.23-1.87-.1-.15-.37-.25-.67-.4z"/>
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.378 5.074L2 22l5.076-1.334a9.96 9.96 0 0 0 4.928 1.338c5.522 0 10.004-4.48 10.004-10.004C22.008 6.48 17.526 2 12.004 2zm5.736 13.91c-.244.686-1.214 1.258-1.768 1.326-.496.06-1.144.11-3.32-.782-2.784-1.14-4.576-3.974-4.716-4.162-.136-.184-1.116-1.488-1.116-2.836 0-1.348.706-2.012.956-2.274.204-.216.544-.31.87-.31h.566c.204 0 .382.01.554.412.186.43.636 1.544.69 1.654.056.11.092.238.016.388-.074.15-.112.246-.226.376-.114.13-.23.238-.33.356-.11.12-.224.25-.094.474.128.224.57 1.054 1.222 1.636.84.75 1.55.98 1.77 1.092.22.112.348.094.478-.056.128-.15.556-.648.706-.87.152-.22.304-.184.512-.108.208.076 1.32.622 1.546.736.228.112.38.168.436.264.056.094.056.554-.188 1.24z"/>
         </svg>
     </a>
 
@@ -368,7 +370,9 @@
                    class="ds-button-primary"
                    style="height: 44px; padding: 10px 20px; font-size: 15px;">
                     <span class="mr-2">Falar no WhatsApp</span>
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.864-9.843.002-2.63-1.023-5.101-2.886-6.968C16.586 1.875 14.111.85 11.487.85c-5.443 0-9.866 4.415-9.87 9.846-.001 1.702.454 3.361 1.317 4.816l-.991 3.616 3.704-.972zm13.628-7.734c-.3-.15-1.77-.875-2.046-.975-.276-.1-.477-.15-.677.15-.2.3-.775.975-.95 1.175-.177.2-.35.225-.65.075-1.205-.6-2.016-1.1-2.825-2.493-.215-.37.215-.345.615-1.14.06-.12.03-.225-.015-.325-.045-.1-.477-1.15-.654-1.575-.172-.413-.343-.356-.477-.362-.124-.005-.268-.005-.41-.005-.14 0-.37.052-.564.263-.194.21-1.4 1.373-1.4 3.346s1.437 3.882 1.637 4.15c.2.27 2.825 4.313 6.843 6.05.955.413 1.7.66 2.285.847.96.304 1.83.261 2.52.158.76-.113 2.33-.95 2.658-1.87.33-.92.33-1.7.23-1.87-.1-.15-.37-.25-.67-.4z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.378 5.074L2 22l5.076-1.334a9.96 9.96 0 0 0 4.928 1.338c5.522 0 10.004-4.48 10.004-10.004C22.008 6.48 17.526 2 12.004 2zm5.736 13.91c-.244.686-1.214 1.258-1.768 1.326-.496.06-1.144.11-3.32-.782-2.784-1.14-4.576-3.974-4.716-4.162-.136-.184-1.116-1.488-1.116-2.836 0-1.348.706-2.012.956-2.274.204-.216.544-.31.87-.31h.566c.204 0 .382.01.554.412.186.43.636 1.544.69 1.654.056.11.092.238.016.388-.074.15-.112.246-.226.376-.114.13-.23.238-.33.356-.11.12-.224.25-.094.474.128.224.57 1.054 1.222 1.636.84.75 1.55.98 1.77 1.092.22.112.348.094.478-.056.128-.15.556-.648.706-.87.152-.22.304-.184.512-.108.208.076 1.32.622 1.546.736.228.112.38.168.436.264.056.094.056.554-.188 1.24z"/>
+                    </svg>
                 </a>
             </div>
 
@@ -466,7 +470,9 @@
                                rel="noopener noreferrer"
                                class="ds-button-primary w-full xs:w-auto">
                                 <span class="mr-2">Falar no WhatsApp</span>
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.864-9.843.002-2.63-1.023-5.101-2.886-6.968C16.586 1.875 14.111.85 11.487.85c-5.443 0-9.866 4.415-9.87 9.846-.001 1.702.454 3.361 1.317 4.816l-.991 3.616 3.704-.972zm13.628-7.734c-.3-.15-1.77-.875-2.046-.975-.276-.1-.477-.15-.677.15-.2.3-.775.975-.95 1.175-.177.2-.35.225-.65.075-1.205-.6-2.016-1.1-2.825-2.493-.215-.37.215-.345.615-1.14.06-.12.03-.225-.015-.325-.045-.1-.477-1.15-.654-1.575-.172-.413-.343-.356-.477-.362-.124-.005-.268-.005-.41-.005-.14 0-.37.052-.564.263-.194.21-1.4 1.373-1.4 3.346s1.437 3.882 1.637 4.15c.2.27 2.825 4.313 6.843 6.05.955.413 1.7.66 2.285.847.96.304 1.83.261 2.52.158.76-.113 2.33-.95 2.658-1.87.33-.92.33-1.7.23-1.87-.1-.15-.37-.25-.67-.4z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.378 5.074L2 22l5.076-1.334a9.96 9.96 0 0 0 4.928 1.338c5.522 0 10.004-4.48 10.004-10.004C22.008 6.48 17.526 2 12.004 2zm5.736 13.91c-.244.686-1.214 1.258-1.768 1.326-.496.06-1.144.11-3.32-.782-2.784-1.14-4.576-3.974-4.716-4.162-.136-.184-1.116-1.488-1.116-2.836 0-1.348.706-2.012.956-2.274.204-.216.544-.31.87-.31h.566c.204 0 .382.01.554.412.186.43.636 1.544.69 1.654.056.11.092.238.016.388-.074.15-.112.246-.226.376-.114.13-.23.238-.33.356-.11.12-.224.25-.094.474.128.224.57 1.054 1.222 1.636.84.75 1.55.98 1.77 1.092.22.112.348.094.478-.056.128-.15.556-.648.706-.87.152-.22.304-.184.512-.108.208.076 1.32.622 1.546.736.228.112.38.168.436.264.056.094.056.554-.188 1.24z"/>
+                                </svg>
                             </a>
                             <a href="https://www.instagram.com/bubbleboxtaubate/" 
                                target="_blank" 
@@ -478,7 +484,7 @@
                         </div>
                     </div>
 
-                    <!-- Lado Direito: Placa "Inauguração em Breve" (UI Visualmente Riquíssima) -->
+                    <!-- Lado Direito: Placa "Inauguração em Breve" -->
                     <div class="md:col-span-5 flex justify-center items-center relative">
                         <div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full scale-90 -z-10"></div>
                         
@@ -805,7 +811,7 @@
                         <div class="relative w-full max-w-sm bg-gradient-to-tr from-primary-dark to-primary p-8 rounded-3xl text-white shadow-xl flex flex-col justify-between aspect-[3/4]">
                             <div class="flex justify-between items-start">
                                 <span class="bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-md">Praticidade e Tecnologia</span>
-                                <svg class="w-6 h-6 text-secondary fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg class="w-6 h-6 text-accent fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                             </div>
                             <div>
                                 <p class="text-2xl font-bold mb-2">Simplicidade para todos</p>
@@ -881,7 +887,7 @@
                         <p class="ds-aux leading-relaxed">Roupas prontas para usar em menos tempo.</p>
                     </div>
 
-                    <!-- Card 5 (Atualizado para Climatizado) -->
+                    <!-- Card 5 -->
                     <div class="ds-card">
                         <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
                             <!-- SVG Termômetro / Climatização -->
@@ -901,7 +907,7 @@
                         <p class="ds-aux leading-relaxed">Diversas opções para tornar a experiência ainda mais prática.</p>
                     </div>
 
-                    <!-- Card 7 (Atualizado para Gratuito) -->
+                    <!-- Card 7 -->
                     <div class="ds-card">
                         <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
                             <!-- SVG Carro / Estacionamento -->
@@ -931,7 +937,7 @@
                 <div class="bg-gradient-to-tr from-primary-dark to-primary text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden">
                     <div class="absolute -right-12 -bottom-12 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
                     
-                    <div class="inline-flex p-3 bg-white/15 rounded-2xl mb-4 text-secondary">
+                    <div class="inline-flex p-3 bg-white/15 rounded-2xl mb-4 text-accent">
                         <!-- SVG Calendário Relógio -->
                         <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
@@ -942,7 +948,7 @@
                     </p>
                     
                     <!-- Selo ampliado com alto impacto visual -->
-                    <div class="inline-flex flex-col items-center justify-center bg-white text-primary-dark p-6 sm:p-8 rounded-3xl shadow-2xl border border-secondary/30 transform hover:scale-105 transition-transform duration-300">
+                    <div class="inline-flex flex-col items-center justify-center bg-white text-primary-dark p-6 sm:p-8 rounded-3xl shadow-2xl border border-accent/30 transform hover:scale-105 transition-transform duration-300">
                         <span class="text-xs sm:text-sm font-bold tracking-widest text-primary uppercase bg-primary/10 px-4 py-1.5 rounded-full mb-3">Funcionamento</span>
                         <span class="text-xl sm:text-2xl font-black text-primary-dark mb-1">ABERTA TODOS OS DIAS</span>
                         <span class="text-3xl sm:text-4xl font-extrabold text-primary">05h00 às 00h00</span>
@@ -1137,7 +1143,7 @@
                         <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left focus-visible:outline" 
                                 aria-expanded="false" 
                                 aria-controls="faq-ans-8">
-                            <span class="font-bold text-primary-dark text-base sm:text-lg">Quando será a inauguração?</span>
+                            <span class="font-bold text-primary-dark text-base sm:text-lg">Quando será a inaunguração?</span>
                             <svg class="w-5 h-5 text-primary transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="faq-ans-8" class="faq-content">
@@ -1192,7 +1198,7 @@
                     
                     <h2 id="instagram-title" class="ds-h2">Acompanhe nossa inauguração</h2>
                     <p class="ds-body max-w-xl mx-auto">
-                        Estamos compartilhando os preparativos da nova unidade, novidades e informações sobre a inauguração. Siga nosso Instagram e fique por dentro de tudo.
+                        Estamos compartilhando os preparativos da nova unidade, novidades e informações sobre a inaunguração. Siga nosso Instagram e fique por dentro de tudo.
                     </p>
 
                     <div class="inline-block bg-white border border-border px-6 py-3 rounded-2xl font-semibold text-primary-dark">
@@ -1225,12 +1231,15 @@
                 </p>
                 
                 <div>
+                    <!-- Utilizando bg-accent para manter o botão em amarelo institucional de alto contraste e conformidade de cores -->
                     <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+inaugura%C3%A7%C3%A3o+da+Bubble+Box+Taubat%C3%A9." 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       class="inline-flex items-center justify-center gap-3 bg-secondary text-primary-dark hover:bg-white px-10 py-5 rounded-2xl font-extrabold text-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-visible:outline">
+                       class="inline-flex items-center justify-center gap-3 bg-accent text-primary-dark hover:bg-white px-10 py-5 rounded-2xl font-extrabold text-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-visible:outline">
                         <span>Falar no WhatsApp</span>
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.864-9.843.002-2.63-1.023-5.101-2.886-6.968C16.586 1.875 14.111.85 11.487.85c-5.443 0-9.866 4.415-9.87 9.846-.001 1.702.454 3.361 1.317 4.816l-.991 3.616 3.704-.972zm13.628-7.734c-.3-.15-1.77-.875-2.046-.975-.276-.1-.477-.15-.677.15-.2.3-.775.975-.95 1.175-.177.2-.35.225-.65.075-1.205-.6-2.016-1.1-2.825-2.493-.215-.37.215-.345.615-1.14.06-.12.03-.225-.015-.325-.045-.1-.477-1.15-.654-1.575-.172-.413-.343-.356-.477-.362-.124-.005-.268-.005-.41-.005-.14 0-.37.052-.564.263-.194.21-1.4 1.373-1.4 3.346s1.437 3.882 1.637 4.15c.2.27 2.825 4.313 6.843 6.05.955.413 1.7.66 2.285.847.96.304 1.83.261 2.52.158.76-.113 2.33-.95 2.658-1.87.33-.92.33-1.7.23-1.87-.1-.15-.37-.25-.67-.4z"/></svg>
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.378 5.074L2 22l5.076-1.334a9.96 9.96 0 0 0 4.928 1.338c5.522 0 10.004-4.48 10.004-10.004C22.008 6.48 17.526 2 12.004 2zm5.736 13.91c-.244.686-1.214 1.258-1.768 1.326-.496.06-1.144.11-3.32-.782-2.784-1.14-4.576-3.974-4.716-4.162-.136-.184-1.116-1.488-1.116-2.836 0-1.348.706-2.012.956-2.274.204-.216.544-.31.87-.31h.566c.204 0 .382.01.554.412.186.43.636 1.544.69 1.654.056.11.092.238.016.388-.074.15-.112.246-.226.376-.114.13-.23.238-.33.356-.11.12-.224.25-.094.474.128.224.57 1.054 1.222 1.636.84.75 1.55.98 1.77 1.092.22.112.348.094.478-.056.128-.15.556-.648.706-.87.152-.22.304-.184.512-.108.208.076 1.32.622 1.546.736.228.112.38.168.436.264.056.094.056.554-.188 1.24z"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -1281,13 +1290,13 @@
                 <div class="space-y-4">
                     <h3 class="font-bold text-lg">Siga-nos</h3>
                     <div class="flex gap-4">
-                        <a href="https://www.instagram.com/bubbleboxtaubate/" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:text-secondary hover:bg-white/20 transition-all shadow-sm" aria-label="Acesse nosso perfil no Instagram">
+                        <a href="https://www.instagram.com/bubbleboxtaubate/" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:text-accent hover:bg-white/20 transition-all shadow-sm" aria-label="Acesse nosso perfil no Instagram">
                             <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61591589489269" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:text-secondary hover:bg-white/20 transition-all shadow-sm" aria-label="Acesse nossa página no Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61591589489269" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:text-accent hover:bg-white/20 transition-all shadow-sm" aria-label="Acesse nossa página no Facebook">
                             <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
-                        <a href="https://www.youtube.com/@bubbleboxtaubate" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:text-secondary hover:bg-white/20 transition-all shadow-sm" aria-label="Acesse nosso canal no YouTube">
+                        <a href="https://www.youtube.com/@bubbleboxtaubate" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:text-accent hover:bg-white/20 transition-all shadow-sm" aria-label="Acesse nosso canal no YouTube">
                             <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
                         </a>
                     </div>
@@ -1300,8 +1309,8 @@
             <div class="flex flex-col sm:flex-row items-center justify-between ds-footer-text text-white/60 gap-4">
                 <p>© Bubble Box Taubaté — Todos os direitos reservados.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-secondary focus-visible:outline transition-colors">Política de Privacidade</a>
-                    <a href="#" class="hover:text-secondary focus-visible:outline transition-colors">Termos de Uso</a>
+                    <a href="#" class="hover:text-accent focus-visible:outline transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-accent focus-visible:outline transition-colors">Termos de Uso</a>
                 </div>
             </div>
         </div>
