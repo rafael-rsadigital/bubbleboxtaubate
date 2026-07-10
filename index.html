@@ -146,7 +146,7 @@
             --primary: #542360;       /* Roxo Bubble Box oficial */
             --primary-dark: #3a1643;  /* Roxo escuro */
             --secondary: #029FA9;     /* Azul turquesa Bubble Box oficial */
-            --accent: #029FA9;        /* Azul turquesa */
+            --accent: #FFD400;        /* Amarelo institucional */
             --background: #FFFFFF;
             --background-soft: #F7F8FC; /* Cinza muito claro */
             --border: #E8EBF3;
@@ -288,9 +288,12 @@
             border-color: rgba(2, 159, 169, 0.15);
         }
 
+        /* PADRONIZAÇÃO VISUAL PREMIUM DAS IMAGENS DA LANDING PAGE */
         .ds-image {
             border-radius: 20px;
             object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            transition: transform 300ms ease, box-shadow 300ms ease;
         }
 
         /* ACESSIBILIDADE - INDICADOR DE FOCO VISÍVEL E CLARO */
@@ -373,40 +376,6 @@
                 z-index: 1;
             }
         }
-
-        /* OVERRIDING GRADIENTS FOR SOLID CLEAN BRAND STYLING */
-        .bg-gradient-to-tr, .bg-gradient-to-b, .bg-gradient-to-br {
-            background-image: none !important;
-            background-color: var(--primary) !important;
-        }
-        main .bg-gradient-to-b {
-            background-image: none !important;
-            background-color: var(--background) !important;
-        }
-        .instagram-gradient {
-            background: linear-gradient(to top right, #833AB4, #FD1D1D, #FFC010) !important;
-        }
-        header .bg-gradient-to-tr {
-            background-image: none !important;
-            background-color: var(--primary) !important;
-        }
-        
-        /* Apply Secondary Turquoise selectively to accents and SVG details */
-        .text-primary, .text-secondary {
-            color: var(--secondary) !important;
-        }
-        .text-primary-dark {
-            color: var(--primary) !important;
-        }
-        .ds-card svg, .p-3 svg, .w-12 svg, .w-16 svg {
-            color: var(--secondary) !important;
-        }
-        
-        /* Adjust global text selection to match brand color */
-        ::selection {
-            background-color: var(--secondary);
-            color: #FFFFFF;
-        }
     </style>
 </head>
 <body class="bg-white text-text font-sans antialiased">
@@ -417,18 +386,18 @@
        rel="noopener noreferrer"
        class="float-whatsapp"
        aria-label="Falar conosco pelo WhatsApp">
-        <svg class="w-7 h-7 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
+        <svg class="w-7 h-7 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.223-.57-.372V7c-.012-.001 0 0 0 0zm-5.434 4.87h-.007a9.954 9.954 0 01-5.074-1.385l-.364-.217-3.774.989.1006-3.668-.238-.379a9.948 9.948 0 01-1.517-5.26c.001-5.495 4.475-9.97 9.97-9.97a9.914 9.914 0 017.042 2.923 9.918 9.918 0 012.924 7.05c-.004 5.497-4.478 9.97-9.967 9.97zM20.52 3.449A11.901 11.901 0 0012 0C5.373 0 0 5.373 0 12c0 2.112.547 4.16 1.59 5.965L0 24l6.163-1.619A11.907 11.907 0 0012 24c6.627 0 12-5.373 12-12a11.912 11.912 0 00-3.48-8.551z"/>
         </svg>
     </a>
 
     <!-- HEADER / NAVIGATION (ACCESSIBLE) -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border h-20 flex items-center transition-all duration-300">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border h-20 sm:h-24 flex items-center transition-all duration-300">
         <div class="max-w-[1200px] w-full mx-auto px-5 sm:px-6 lg:px-10 flex items-center justify-between">
             
-            <!-- Logo / Identidade (Logo de imagem oficial) -->
+            <!-- Logo / Identidade (Aumentado ~3x com imagem original) -->
             <a href="#" class="flex items-center gap-3 group focus-visible:outline focus-visible:outline-2" aria-label="Bubble Box Taubaté - Página Inicial">
-                <img src="/images/logotipo-bubble-box-taubate.png" alt="Logotipo Bubble Box Taubaté" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" loading="eager">
+                <img src="/images/logotipo-bubble-box-taubate.png" alt="Logotipo Bubble Box Taubaté" class="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105" loading="eager">
             </a>
 
             <!-- Navegação Desktop (ACCESSIBLE VIA TAB) -->
@@ -440,7 +409,7 @@
                 <a href="#instagram" class="text-base font-medium text-text hover:text-secondary transition-colors focus-visible:outline">Instagram</a>
             </nav>
 
-            <!-- CTA Header -->
+            <!-- CTA Header (WhatsApp ícone perfeito) -->
             <div class="hidden md:block">
                 <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+inaugura%C3%A7%C3%A3o+da+Bubble+Box+Taubat%C3%A9." 
                    target="_blank" 
@@ -448,7 +417,7 @@
                    class="ds-button-primary"
                    style="height: 44px; padding: 10px 20px; font-size: 15px;">
                     <span class="mr-2">Falar no WhatsApp</span>
-                    <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px;">
+                    <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.223-.57-.372V7c-.012-.001 0 0 0 0zm-5.434 4.87h-.007a9.954 9.954 0 01-5.074-1.385l-.364-.217-3.774.989.1006-3.668-.238-.379a9.948 9.948 0 01-1.517-5.26c.001-5.495 4.475-9.97 9.97-9.97a9.914 9.914 0 017.042 2.923 9.918 9.918 0 012.924 7.05c-.004 5.497-4.478 9.97-9.967 9.97zM20.52 3.449A11.901 11.901 0 0012 0C5.373 0 0 5.373 0 12c0 2.112.547 4.16 1.59 5.965L0 24l6.163-1.619A11.907 11.907 0 0012 24c6.627 0 12-5.373 12-12a11.912 11.912 0 00-3.48-8.551z"/>
                     </svg>
                 </a>
@@ -488,7 +457,7 @@
     </header>
 
     <!-- MAIN SECTIONS -->
-    <main class="pt-20">
+    <main class="pt-20 sm:pt-24">
 
         <!-- HERO SECTION -->
         <section class="py-16 md:py-24 bg-white overflow-hidden" aria-labelledby="hero-title">
@@ -509,14 +478,14 @@
                             A Bubble Box está chegando ao Centro de Taubaté com uma proposta simples: oferecer uma maneira rápida, prática e confortável de lavar e secar roupas utilizando máquinas industriais de alta capacidade. Estamos finalizando os últimos detalhes para oferecer uma experiência prática, moderna e confortável para cuidar das suas roupas.
                         </p>
 
-                        <!-- Botões de Ação -->
+                        <!-- Botões de Ação (Com ícone WhatsApp corrigido) -->
                         <div class="flex flex-col xs:flex-row items-center justify-center md:justify-start gap-4">
                             <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+inaugura%C3%A7%C3%A3o+da+Bubble+Box+Taubat%C3%A9." 
                                target="_blank" 
                                rel="noopener noreferrer"
                                class="ds-button-primary w-full xs:w-auto">
                                 <span class="mr-2">Falar no WhatsApp</span>
-                                <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+                                <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.223-.57-.372V7c-.012-.001 0 0 0 0zm-5.434 4.87h-.007a9.954 9.954 0 01-5.074-1.385l-.364-.217-3.774.989.1006-3.668-.238-.379a9.948 9.948 0 01-1.517-5.26c.001-5.495 4.475-9.97 9.97-9.97a9.914 9.914 0 017.042 2.923 9.918 9.918 0 012.924 7.05c-.004 5.497-4.478 9.97-9.967 9.97zM20.52 3.449A11.901 11.901 0 0012 0C5.373 0 0 5.373 0 12c0 2.112.547 4.16 1.59 5.965L0 24l6.163-1.619A11.907 11.907 0 0012 24c6.627 0 12-5.373 12-12a11.912 11.912 0 00-3.48-8.551z"/>
                                 </svg>
                             </a>
@@ -558,10 +527,10 @@
                         </div>
                     </div>
 
-                    <!-- Lado Direito: Imagem Principal bubblebox.JPG (Ajustado) -->
+                    <!-- Lado Direito: Imagem Principal bubblebox-home.jpg (Ajustada com padrões do Design System) -->
                     <div class="md:col-span-5 flex justify-center items-center relative">
                         <div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full scale-90 -z-10"></div>
-                        <img src="/images/bubblebox.JPG" alt="Unidade Bubble Box" class="w-full max-w-md h-[400px] object-cover rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] ds-image transition-transform duration-300 hover:scale-[1.02]" loading="eager">
+                        <img src="/images/bubblebox-home.jpg" alt="Unidade Bubble Box" class="w-full max-w-md h-[400px] object-cover rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] ds-image transition-transform duration-300 hover:scale-[1.02]" loading="eager">
                     </div>
 
                 </div>
@@ -659,13 +628,10 @@
                         </div>
                     </div>
 
-                    <!-- Lado Direito: Ilustração / Card Visual -->
+                    <!-- Lado Direito: Ilustração / Card de Estrutura de Franquia (Com imagem original bubblebox.JPG padronizada) -->
                     <div class="flex justify-center">
                         <div class="relative w-full max-w-sm bg-background-soft border border-border p-6 rounded-3xl shadow-md">
-                            <div class="aspect-video bg-primary rounded-2xl flex items-center justify-center text-white p-6 relative overflow-hidden mb-6">
-                                <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-                                <svg class="w-16 h-16 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0z"/></svg>
-                            </div>
+                            <img src="/images/bubblebox.JPG" alt="Estrutura de Franquia Bubble Box" class="w-full h-48 object-cover rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] ds-image mb-6">
                             <h3 class="text-xl font-bold text-primary-dark mb-2">Estrutura de Franquia</h3>
                             <p class="ds-aux leading-relaxed">
                                 Seguimos os rigorosos padrões operacionais exigidos pela marca nacional, assegurando um ambiente higienizado e climatizado para a sua total comodidade.
@@ -892,20 +858,10 @@
             <div class="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                     
-                    <!-- Lado Esquerdo: Imagem/Composição Visual -->
-                    <div class="md:col-span-5 flex justify-center order-last md:order-first">
-                        <div class="relative w-full max-w-sm bg-primary p-8 rounded-3xl text-white shadow-xl flex flex-col justify-between aspect-[3/4]">
-                            <div class="flex justify-between items-start">
-                                <span class="bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-md">Praticidade e Tecnologia</span>
-                                <svg class="w-6 h-6 text-secondary fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                            </div>
-                            <div>
-                                <p class="text-2xl font-bold mb-2">Simplicidade para todos</p>
-                                <p class="text-sm text-white/95 leading-relaxed">
-                                    Uma excelente solução para otimizar sua rotina corrida, liberando tempo valioso para o que realmente importa de forma inteligente e confortável.
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Lado Esquerdo: Imagem da Seção "Praticidade e Tecnologia" (Com /images/praticidade-lavanderia.png padronizada) -->
+                    <div class="md:col-span-5 flex justify-center order-last md:order-first relative">
+                        <div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full scale-90 -z-10"></div>
+                        <img src="/images/praticidade-lavanderia.png" alt="Praticidade e Tecnologia" class="w-full max-w-md h-[400px] object-cover rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] ds-image transition-transform duration-300 hover:scale-[1.02]">
                     </div>
 
                     <!-- Lado Direito: Razões Educativas -->
@@ -1009,7 +965,7 @@
             </div>
         </section>
 
-        <!-- HORÁRIO DE FUNCIONAMENTO (Selo Ampliado) -->
+        <!-- HORÁRIO DE FUNCIONAMENTO (Selo Ampliado com Impacto Visual) -->
         <section class="py-16 md:py-20 bg-background-soft" aria-labelledby="horario-title">
             <div class="max-w-[800px] mx-auto px-5 sm:px-6 lg:px-10 text-center">
                 <div class="bg-primary text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden">
@@ -1104,7 +1060,7 @@
                     </p>
                 </div>
 
-                <!-- Lista de Accordions Atualizada (6. FAQ do usuário) -->
+                <!-- Lista de Accordions Atualizada -->
                 <div class="space-y-4">
                     
                     <!-- FAQ Item 1 -->
@@ -1200,7 +1156,7 @@
                         </button>
                         <div id="faq-ans-6" class="faq-content">
                             <div class="px-6 pb-5 pt-1 ds-aux leading-relaxed">
-                                A lavagem leva aproximadamente 30 minutos. A secagem pode levar até 45 minutos, dependendo do volume e do tipo das roupas. Em cerca de uma hora você pode sair com suas roupas limpas, secas e prontas para usar.
+                                A lavagem leva aproximadamente 30 minutos. A secagem pode levar até 45 minutos, dependendo do volume e do tipo das roupas. Em cerca de uma hora o processo está completo.
                             </div>
                         </div>
                     </div>
@@ -1270,7 +1226,7 @@
                         <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left focus-visible:outline" 
                                 aria-expanded="false" 
                                 aria-controls="faq-ans-11">
-                            <span class="font-bold text-primary-dark text-base sm:text-lg">Quando será a inauração?</span>
+                            <span class="font-bold text-primary-dark text-base sm:text-lg">Quando será a inauguração?</span>
                             <svg class="w-5 h-5 text-secondary transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="faq-ans-11" class="faq-content">
@@ -1288,11 +1244,11 @@
         <section id="instagram" class="py-16 md:py-24 bg-white" aria-labelledby="instagram-title">
             <div class="max-w-[800px] mx-auto px-5 sm:px-6 lg:px-10 text-center">
                 <div class="bg-background-soft border border-border p-8 sm:p-12 rounded-3xl shadow-md space-y-6">
-                    <div class="inline-flex p-4 instagram-gradient text-white rounded-2xl shadow-md">
+                    <div class="inline-flex p-4 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#FFC010] text-white rounded-2xl shadow-md">
                         <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                     </div>
                     
-                    <h2 id="instagram-title" class="ds-h2">Acompanhe nossa inauguração</h2>
+                    <h2 id="instagram-title" class="ds-h2">Acompanhe nossaçãõ</h2>
                     <p class="ds-body max-w-xl mx-auto">
                         Estamos compartilhando os preparativos da nova unidade, novidades e informações sobre a inauguração. Siga nosso Instagram e fique por dentro de tudo.
                     </p>
@@ -1326,13 +1282,13 @@
                 </p>
                 
                 <div>
-                    <!-- Yellow accent button with rich primary deep text inside -->
+                    <!-- Botão WhatsApp com ícone perfeito -->
                     <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+inaugura%C3%A7%C3%A3o+da+Bubble+Box+Taubat%C3%A9." 
                        target="_blank" 
                        rel="noopener noreferrer"
                        class="inline-flex items-center justify-center gap-3 bg-[#FFD400] text-[#542360] hover:bg-white px-10 py-5 rounded-2xl font-extrabold text-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-visible:outline">
                         <span>Falar no WhatsApp</span>
-                        <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
+                        <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.223-.57-.372V7c-.012-.001 0 0 0 0zm-5.434 4.87h-.007a9.954 9.954 0 01-5.074-1.385l-.364-.217-3.774.989.1006-3.668-.238-.379a9.948 9.948 0 01-1.517-5.26c.001-5.495 4.475-9.97 9.97-9.97a9.914 9.914 0 017.042 2.923 9.918 9.918 0 012.924 7.05c-.004 5.497-4.478 9.97-9.967 9.97zM20.52 3.449A11.901 11.901 0 0012 0C5.373 0 0 5.373 0 12c0 2.112.547 4.16 1.59 5.965L0 24l6.163-1.619A11.907 11.907 0 0012 24c6.627 0 12-5.373 12-12a11.912 11.912 0 00-3.48-8.551z"/>
                         </svg>
                     </a>
@@ -1347,10 +1303,10 @@
         <div class="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 
-                <!-- Coluna 1: Identidade (Substituído com imagem original do logotipo) -->
+                <!-- Coluna 1: Identidade (Aumentada com logotipo footer) -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="/images/logotipo-bubble-box-taubate.png" alt="Logotipo Bubble Box Taubaté" class="h-12 w-auto object-contain">
+                        <img src="/images/logotipo-bubble-box-taubate-footer.png" alt="Logotipo Bubble Box Taubaté" class="h-16 w-auto object-contain">
                     </div>
                     <p class="ds-footer-text text-white/80 mt-2">
                         Bubble Box Taubaté é uma unidade da rede Bubble Box, trazendo ao Centro de Taubaté uma proposta moderna de lavanderia self-service com foco em praticidade, conforto e eficiência.
