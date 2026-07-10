@@ -376,6 +376,19 @@
                 z-index: 1;
             }
         }
+
+        /* ANIMAÇÃO VIBRANTE DE EXPECTATIVA */
+        @keyframes periodic-vibrate {
+            0%, 85%, 100% { transform: scale(1) rotate(0deg); }
+            87% { transform: scale(1.05) translate(-1px, 1px) rotate(-1deg); }
+            89% { transform: scale(1.05) translate(1px, -1px) rotate(1deg); }
+            91% { transform: scale(1.05) translate(-1px, -1px) rotate(-1deg); }
+            93% { transform: scale(1.05) translate(1px, 1px) rotate(1deg); }
+            95% { transform: scale(1.05) translate(0) rotate(0deg); }
+        }
+        .animate-vibrate {
+            animation: periodic-vibrate 3s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-white text-text font-sans antialiased">
@@ -395,7 +408,7 @@
             
             <!-- Logo / Identidade (Aumentado ~3x com imagem original) -->
             <a href="#" class="flex items-center gap-3 group focus-visible:outline focus-visible:outline-2" aria-label="Bubble Box Taubaté - Página Inicial">
-                <img src="/images/logotipo-bubble-box-taubate.png" alt="Logotipo Bubble Box Taubaté" class="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105" loading="eager">
+                <img src="/images/logotipo-bubble-box-taubate.png" alt="Logotipo Bubble Box Taubaté" class="h-16 sm:h-20 w-auto object-contain transition-transform group-hover:scale-105" loading="eager">
             </a>
 
             <!-- Navegação Desktop (ACCESSIBLE VIA TAB) -->
@@ -462,8 +475,8 @@
                     
                     <!-- Lado Esquerdo: Conteúdo Textual -->
                     <div class="md:col-span-7 text-center md:text-left flex flex-col justify-center">
-                        <!-- Badge Discreta -->
-                        <div class="ds-badge mb-6 mx-auto md:mx-0">
+                        <!-- Badge Discreta com Animação Vibrante -->
+                        <div class="ds-badge mb-6 mx-auto md:mx-0 animate-vibrate">
                             <span>Inauguração em breve</span>
                         </div>
                         
@@ -588,7 +601,7 @@
                     <div class="space-y-6">
                         <h2 id="em-breve-title" class="ds-h2">A Bubble Box está chegando ao Centro de Taubaté!</h2>
                         <p class="ds-body">
-                            Estamos preparando cada detalhe para oferecer uma experiência moderna em lavanderia self-service. Aqui você poderá lavar desde as roupas do dia a dia até peças maiores, como edredons e cobertores, utilizando máquinas industriais com produtos profissionais inclusos em cada ciclo. Além da praticidade, você encontrará um ambiente organized, confortável e estacionamento no local para tornar sua visita ainda mais conveniente. Em breve estaremos prontos para receber você.
+                            Estamos preparando cada detalhe para oferecer uma experiência moderna em lavanderia self-service. Aqui você poderá lavar desde as roupas do dia a dia até peças maiores, como edredons e cobertores, utilizando máquinas industriais com produtos profissionais inclusos em cada ciclo. Além da praticidade, você encontrará um ambiente organizado, confortável e estacionamento no local para tornar sua visita ainda mais conveniente. Em breve estaremos prontos para receber você.
                         </p>
                         
                         <div class="space-y-4">
@@ -1015,7 +1028,7 @@
                         </div>
 
                         <div class="flex justify-center md:justify-start">
-                            <a href="https://maps.google.com/?q=Av.+Juscelino+Kubitschek+de+Oliveira,+701+-+Centro,+Taubate+-+SP" 
+                            <a href="https://maps.app.goo.gl/o8c2Vo4LyjSKbAnW8" 
                                target="_blank" 
                                rel="noopener noreferrer"
                                class="ds-button-primary w-full xs:w-auto">
@@ -1029,7 +1042,7 @@
                     <div class="md:col-span-7">
                         <div class="w-full h-96 map-container">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6208035136155!2d-45.5681023!3d-23.0193132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccc4586d30fb39%3A0xe5a36371cb14b0b!2sAv.%20Juscelino%20Kubitschek%20de%20Oliveira%2C%20701%20-%20Centro%2C%20Taubat%C3%A9%20-%20SP%2C%2012010-600!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14687.172706365061!2d-45.58022875926695!3d-23.031364969231944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccf900cd1f50b9%3A0x4d2d225f735db142!2sLavanderia%20Bubble%20Box%20Taubat%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1783651686825!5m2!1spt-BR!2sbr" 
                                 class="w-full h-full border-0" 
                                 allowfullscreen="" 
                                 aria-label="Mapa de localização da Bubble Box Taubaté"
@@ -1298,7 +1311,7 @@
                 <!-- Coluna 1: Identidade (Ajustada com logotipo proporcional ao topo) -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="/images/logotipo-bubble-box-taubate-footer.png" alt="Logotipo Bubble Box Taubaté" class="h-14 sm:h-16 w-auto object-contain">
+                        <img src="/images/logotipo-bubble-box-taubate-footer.png" alt="Logotipo Bubble Box Taubaté" class="h-16 sm:h-20 w-auto object-contain">
                     </div>
                     <p class="ds-footer-text text-white/80 mt-2">
                         Bubble Box Taubaté é uma unidade da rede Bubble Box, trazendo ao Centro de Taubaté uma proposta moderna de lavanderia self-service com foco em praticidade, conforto e eficiência.
