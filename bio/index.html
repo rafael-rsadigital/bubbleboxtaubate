@@ -42,51 +42,59 @@
     </script>
     
     <style>
+        /* Animação suave e contínua de transição diagonal de cores de cima a baixo */
+        @keyframes diagonalGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body { 
             font-family: 'Poppins', sans-serif; 
-            background: #FFFFFF;
+            /* Gradiente diagonal suave e brilhante intercalando as cores oficiais da marca */
+            background: linear-gradient(135deg, #542360 0%, #029FA9 50%, #542360 100%);
+            background-size: 300% 300%;
+            animation: diagonalGradient 12s ease infinite;
             min-height: 100vh; 
         }
+
         h1, h2, h3, h4 { 
             font-family: 'Bebas Neue', sans-serif; 
             letter-spacing: 0.04em;
         }
         
-        /* Efeitos de Interação Premium com a Paleta Oficial */
+        /* Efeitos de Interação Premium com a Paleta Oficial (Botões Principais) */
         .bio-btn {
             background: #FFFFFF;
             border: 2px solid #542360;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             border-radius: 0.75rem;
             color: #542360;
-            box-shadow: 0 4px 6px rgba(84, 35, 96, 0.04);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
         }
-        .bio-btn:hover {
+        .bio-btn:hover, .bio-btn:active {
             transform: translateY(-2px);
             background: #542360;
             border-color: #542360;
             color: #FFFFFF;
-            box-shadow: 0 8px 20px rgba(84, 35, 96, 0.15);
-        }
-        .bio-btn:active {
-            transform: translateY(0) scale(0.98);
+            box-shadow: 0 8px 20px rgba(84, 35, 96, 0.3);
         }
         
-        /* Estilo dos diferenciais horizontais turquesa (idênticos em formato aos botões principais) */
+        /* Estilo dos diferenciais horizontais turquesa (com inversão suave no hover/touch) */
         .feature-btn {
             background: #029FA9;
             border: 2px solid #029FA9;
             border-radius: 0.75rem;
             color: #FFFFFF;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 4px 6px rgba(2, 159, 169, 0.04);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
         }
-        .feature-btn:hover {
+        .feature-btn:hover, .feature-btn:active {
             transform: translateY(-2px);
             background: #FFFFFF;
             border-color: #029FA9;
             color: #029FA9;
-            box-shadow: 0 8px 20px rgba(2, 159, 169, 0.15);
+            box-shadow: 0 8px 20px rgba(2, 159, 169, 0.3);
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -95,31 +103,33 @@
 </head>
 <body class="antialiased flex flex-col justify-between min-h-screen relative overflow-x-hidden">
 
-    <!-- MAIN CONTENT (Fundo branco translúcido de alta transparência com desfoque de fundo avançado) -->
-    <main class="w-full max-w-md mx-auto px-6 pt-12 pb-12 flex-grow relative z-10 bg-white/75 backdrop-blur-lg shadow-2xl">
+    <!-- MAIN CONTENT (Totalmente transparente para revelar o gradiente em movimento no fundo) -->
+    <!-- STREAMING_CHUNK: Renderizando cabeçalho, logotipo ampliado e informações de endereço... -->
+    <main class="w-full max-w-md mx-auto px-6 pt-12 pb-12 flex-grow relative z-10 bg-transparent">
         
         <!-- CABEÇALHO DO PERFIL -->
         <div class="text-center mb-8 relative">
-            <!-- Aura turquesa sutil de fundo para contraste elegante no tema claro -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-secondary/5 blur-3xl -z-10"></div>
+            <!-- Aura brilhante sutil de fundo para dar profundidade ao logotipo -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-white/10 blur-3xl -z-10"></div>
             
-            <!-- Logotipo em Exibição Limpa e Sem Círculo Abafado -->
+            <!-- Logotipo em Exibição Limpa, Ampliado em 30% -->
             <div class="w-full max-w-[286px] mx-auto mb-5 flex items-center justify-center">
-                <img src="/images/logotipo-bubble-box-taubate.png" alt="Bubble Box Taubaté" class="w-full h-auto object-contain">
+                <img src="/images/logotipo-bubble-box-taubate.png" alt="Bubble Box Taubaté" class="w-full h-auto object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
             </div>
             
-            <p class="text-[11px] text-secondary font-bold uppercase tracking-[0.2em] mt-2">Lavanderia Self-Service</p>
+            <p class="text-[12px] text-accent font-bold uppercase tracking-[0.2em] mt-2">Lavanderia Self-Service</p>
             
-            <!-- Endereço Completo -->
-            <p class="text-[12px] text-gray-700 max-w-xs mx-auto mt-4 leading-relaxed font-medium">
+            <!-- Endereço Completo (Otimizado para leitura sobre o gradiente escuro) -->
+            <p class="text-[12px] text-white/90 max-w-xs mx-auto mt-4 leading-relaxed font-semibold">
                 📍 Av. Juscelino Kubitschek de Oliveira, 701 — Anexo (Posto Petroval), Centro, Taubaté/SP • CEP 12010-600
             </p>
-            <p class="text-[12px] text-primary font-bold tracking-wider mt-2">
+            <p class="text-[13px] text-accent font-extrabold tracking-wider mt-2 uppercase">
                 🕒 Aberto todos os dias das 05:00 às 00:00
             </p>
         </div>
 
-        <!-- BOTÕES / LINKS DE CONVERSÃO (ORDEM EXATA ESPECIFICADA) -->
+        <!-- BOTÕES / LINKS DE CONVERSÃO (ORDEM EXATA SOLICITADA) -->
+        <!-- STREAMING_CHUNK: Renderizando os 6 botões oficiais de conversão... -->
         <div class="space-y-4 mb-10">
             <!-- 1. Site Oficial -->
             <a href="http://bubbleboxtaubate.com.br/" class="bio-btn block w-full py-4 px-6 text-center">
@@ -154,12 +164,13 @@
         </div>
 
         <!-- BANNER DE DESTAQUE: SABÃO OMO E AMACIANTE COMFORT INCLUSOS -->
+        <!-- STREAMING_CHUNK: Renderizando o card de insumos OMO e Comfort no roxo oficial... -->
         <div class="mb-10">
-            <div class="w-full bg-primary border-2 border-secondary rounded-[40px] px-6 py-5 flex items-center justify-between shadow-lg relative overflow-hidden">
+            <div class="w-full bg-primary border-2 border-secondary rounded-[45px] px-6 py-5 flex items-center justify-between shadow-xl relative overflow-hidden">
                 <!-- Sparkle / Brilho Decorativo à Esquerda -->
                 <div class="flex items-center gap-3">
                     <div class="text-secondary shrink-0">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 fill-current animate-pulse" viewBox="0 0 24 24">
                             <path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/>
                         </svg>
                     </div>
@@ -182,12 +193,13 @@
         </div>
 
         <!-- SEÇÃO DE REFORÇO VISUAL / ATRIBUTOS HORIZONTAIS -->
+        <!-- STREAMING_CHUNK: Renderizando os diferenciais horizontais em azul turquesa... -->
         <div class="space-y-4 mb-10">
-            <h2 class="text-2xl font-bold text-primary text-center tracking-wider mb-4">Diferenciais e Praticidade</h2>
+            <h2 class="text-2xl font-bold text-white text-center tracking-wider mb-4 drop-shadow-sm">Diferenciais e Praticidade</h2>
             
             <div class="flex flex-col gap-3">
                 <!-- Card 1: Estacionamento -->
-                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-md">
                     <div class="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center shrink-0">
                         <!-- SVG Estacionamento Padrão Minimalista -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
@@ -196,16 +208,16 @@
                 </div>
 
                 <!-- Card 2: Capacidade -->
-                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-md">
                     <div class="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center shrink-0">
-                        <!-- SVG Máquina de lavar minimalista -->
+                        <!-- SVG Máquina de lavar industrial minimalista -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="21" y1="9" x2="3" y2="9"/><circle cx="12" cy="14" r="4"/></svg>
                     </div>
                     <p class="text-sm font-semibold leading-tight">Máquinas com 12kg de capacidade</p>
                 </div>
 
                 <!-- Card 3: Velocidade Lave -->
-                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-md">
                     <div class="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center shrink-0">
                         <!-- SVG Relógio rápido -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 15 15"/></svg>
@@ -214,9 +226,9 @@
                 </div>
 
                 <!-- Card 4: Velocidade Seque -->
-                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-md">
                     <div class="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center shrink-0">
-                        <!-- SVG Máquina de lavar/secar minimalista repetido para melhor representação -->
+                        <!-- SVG Máquina de Secar/Lavar Minimalista (repetido de forma simétrica para consistência) -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="21" y1="9" x2="3" y2="9"/><circle cx="12" cy="14" r="4"/></svg>
                     </div>
                     <p class="text-sm font-semibold leading-tight">Seque suas roupas em até 45 min</p>
@@ -225,9 +237,10 @@
         </div>
 
         <!-- MAPA INCORPORADO -->
+        <!-- STREAMING_CHUNK: Renderizando o iframe interativo do Google Maps... -->
         <div class="space-y-4 mb-10 text-center">
-            <h2 class="text-2xl font-bold text-primary tracking-wider">Como chegar</h2>
-            <div class="w-full h-56 rounded-2xl overflow-hidden border border-gray-200 shadow-md">
+            <h2 class="text-2xl font-bold text-white tracking-wider drop-shadow-sm">Como chegar</h2>
+            <div class="w-full h-56 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.631532617843!2d-45.562325124685714!3d-23.03729747916344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccf900cd1f50b9%3A0x4d2d225f735db142!2sLavanderia%20Bubble%20Box%20Taubat%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1784400351250!5m2!1spt-BR!2sbr" 
                     class="w-full h-full border-0" 
@@ -241,8 +254,9 @@
     </main>
 
     <!-- TARJA DE CRÉDITOS / DESENVOLVEDOR (RSA DIGITAL) -->
-    <footer class="w-full bg-[#f1edf2]/70 backdrop-blur-lg py-5 text-center border-t border-gray-200 relative z-10">
-        <p class="text-[9px] text-gray-500 uppercase tracking-[0.2em] font-medium px-4 leading-relaxed">
+    <!-- STREAMING_CHUNK: Renderizando rodapé com transparência premium e assinatura... -->
+    <footer class="w-full bg-black/20 backdrop-blur-md py-5 text-center border-t border-white/5 relative z-10">
+        <p class="text-[9px] text-white/60 uppercase tracking-[0.2em] font-medium px-4 leading-relaxed">
             Desenvolvido por 
             <a href="https://wa.me/5512988052097?text=Ol%C3%A1%21+Vi+o+site+da+Bubble+Box+Taubat%C3%A9+no+link+da+bio+e+gostaria+de+falar+sobre+solu%C3%A7%C3%B5es+de+Google+Meu+Neg%C3%B3cio." target="_blank" rel="noopener" class="font-bold text-secondary hover:underline transition-all">
                 RSA Digital
@@ -253,3 +267,4 @@
 
 </body>
 </html>
+```eof
