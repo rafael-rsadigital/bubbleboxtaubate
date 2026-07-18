@@ -77,20 +77,13 @@
             border: 1px solid #E5E7EB;
         }
 
-        .testimonial-card {
-            background: #FFFFFF;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-            border: 1px solid #E5E7EB;
-        }
-
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="antialiased flex flex-col justify-between min-h-screen relative overflow-x-hidden">
-    <!-- Google Tag Manager (noscript) -->
 <body class="antialiased flex flex-col justify-between min-h-screen relative overflow-x-hidden bg-white">
 
+    <!-- MAIN CONTENT -->
     <main class="w-full max-w-md mx-auto px-6 pt-12 pb-12 flex-grow relative z-10 bg-white">
         
         <!-- CABEÇALHO DO PERFIL -->
@@ -103,10 +96,6 @@
                 <img src="/images/logotipo-bubble-box-taubate.png" alt="Bubble Box Taubaté" class="w-full h-auto object-contain">
             </div>
             
-            <!-- Título Principal -->
-            <h1 class="text-4xl font-bold tracking-wider text-primary">
-                Bubble Box Taubaté
-            </h1>
             <p class="text-[11px] text-secondary font-bold uppercase tracking-[0.2em] mt-2">Lavanderia Self-Service</p>
             
             <!-- Endereço Completo -->
@@ -118,40 +107,40 @@
             </p>
         </div>
 
-        <!-- BOTÕES / LINKS DE CONVERSÃO -->
+        <!-- BOTÕES / LINKS DE CONVERSÃO (ORDEM EXATA ESPECIFICADA) -->
         <div class="space-y-4 mb-10">
-            <!-- Site Oficial -->
+            <!-- 1. Site Oficial -->
             <a href="http://bubbleboxtaubate.com.br/" class="bio-btn block w-full py-4 px-6 text-center">
                 <span class="text-[16px] font-bold block">Site Oficial</span>
             </a>
 
-            <!-- Falar no WhatsApp -->
-            <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Vim+pelo+link+da+bio+e+gostaria+de+saber+mais+sobre+a+Bubble+Box+Taubat%C3%A9." target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center">
-                <span class="text-[16px] font-bold block">Falar no WhatsApp</span>
-            </a>
-
-            <!-- Instagram -->
+            <!-- 2. Instagram -->
             <a href="https://www.instagram.com/bubbleboxtaubate/" target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center">
                 <span class="text-[16px] font-bold block">Instagram</span>
             </a>
 
-            <!-- Localização (Google Maps) -->
+            <!-- 3. Como Chegar (Google Maps) -->
             <a href="https://maps.app.goo.gl/o8c2Vo4LyjSKbAnW8" target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center">
                 <span class="text-[16px] font-bold block">Como Chegar (Google Maps)</span>
             </a>
 
-            <!-- Dúvidas Frequentes -->
+            <!-- 4. Dúvidas Frequentes -->
             <a href="http://bubbleboxtaubate.com.br/#faq" class="bio-btn block w-full py-4 px-6 text-center">
                 <span class="text-[16px] font-bold block">Dúvidas Frequentes (FAQ)</span>
             </a>
 
-            <!-- Avalie no Google -->
+            <!-- 5. Avalie no Google -->
             <a href="https://g.page/r/CUKxXXNfIi1NEBM/review" target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center">
                 <span class="text-[16px] font-bold block">Avalie-nos no Google</span>
             </a>
+
+            <!-- 6. Falar no WhatsApp -->
+            <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Vim+pelo+link+da+bio+e+gostaria+de+saber+mais+sobre+a+Bubble+Box+Taubat%C3%A9." target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center">
+                <span class="text-[16px] font-bold block">Falar no WhatsApp</span>
+            </a>
         </div>
 
-        <!-- BANNER DE DESTAQUE: SABÃO OMO E AMACIANTE COMFORT INCLUSOS (Estilo Fiel à image_3f7104.png) -->
+        <!-- BANNER DE DESTAQUE: SABÃO OMO E AMACIANTE COMFORT INCLUSOS -->
         <div class="mb-10">
             <div class="w-full bg-[#1b0824] border-2 border-secondary rounded-[40px] px-6 py-5 flex items-center justify-between shadow-lg relative overflow-hidden">
                 <!-- Sparkle / Brilho Decorativo à Esquerda -->
@@ -179,7 +168,7 @@
             </div>
         </div>
 
-        <!-- SEÇÃO DE REFORÇO VISUAL / ATRIBUTOS MINIMALISTAS -->
+        <!-- SEÇÃO DE REFORÇO VISUAL / ATRIBUTOS HORIZONTAIS -->
         <div class="space-y-4 mb-10">
             <h2 class="text-2xl font-bold text-primary text-center tracking-wider mb-4">Diferenciais e Praticidade</h2>
             
@@ -236,56 +225,6 @@
             </div>
         </div>
 
-        <!-- SEÇÃO DE DEPOIMENTOS DO GOOGLE COM CARROSSEL -->
-        <div class="space-y-6 mb-10 text-center">
-            <div>
-                <h2 class="text-2xl font-bold text-primary mb-1 tracking-wider">Avaliações do Google</h2>
-                <div class="flex items-center justify-center gap-1.5 text-accent mb-2">
-                    <span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span>
-                    <span class="text-sm font-bold text-gray-800 ml-1.5">5.0 / 5.0</span>
-                </div>
-                <p class="text-[11px] text-gray-400 tracking-wider uppercase">(Avaliações no Google Meu Negócio)</p>
-            </div>
-            
-            <!-- CARROSSEL TOUCH-FRIENDLY -->
-            <div class="relative w-full overflow-hidden px-1" id="testimonial-carousel">
-                <div class="flex scroll-smooth snap-x snap-mandatory overflow-x-auto no-scrollbar gap-4 pb-4" id="carousel-track">
-                    <!-- Depoimento 1 -->
-                    <div class="snap-center shrink-0 w-full testimonial-card rounded-2xl p-6 text-left flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-primary text-sm">Rodrigo Silva</h4>
-                            <div class="text-accent text-xs tracking-wider my-1.5">★★★★★</div>
-                            <p class="text-xs text-gray-600 italic leading-relaxed">
-                                "Excelente lavanderia automática! O edredom de casal ficou muito cheiroso e lavou super rápido. O estacionamento gratuito do complexo facilita demais para descarregar o carro."
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Depoimento 2 -->
-                    <div class="snap-center shrink-0 w-full testimonial-card rounded-2xl p-6 text-left flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-primary text-sm">Mariana Costa</h4>
-                            <div class="text-accent text-xs tracking-wider my-1.5">★★★★★</div>
-                            <p class="text-xs text-gray-600 italic leading-relaxed">
-                                "Tudo de última geração e muito simples de usar. Adorei que o sabão Omo e amaciante Comfort de alta qualidade já estão inclusos no preço e caem direto na máquina. Praticidade pura!"
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Depoimento 3 -->
-                    <div class="snap-center shrink-0 w-full testimonial-card rounded-2xl p-6 text-left flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-primary text-sm">Fernando Albuquerque</h4>
-                            <div class="text-accent text-xs tracking-wider my-1.5">★★★★★</div>
-                            <p class="text-xs text-gray-600 italic leading-relaxed">
-                                "Ambiente climatizado impecável, excelente para esperar. Em menos de 1 hora lavei e sequei toda a minha roupa da semana. O atendimento self-service é extremamente prático."
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Indicadores do Carrossel (Dots) -->
-                <div class="flex justify-center flex-wrap gap-1.5 mt-2 max-w-full px-4 mx-auto" id="carousel-dots"></div>
-            </div>
-        </div>
-
     </main>
 
     <!-- TARJA DE CRÉDITOS / DESENVOLVEDOR (RSA DIGITAL) -->
@@ -298,61 +237,5 @@
         </p>
     </footer>
 
-    <!-- Lógica JavaScript do Carrossel Automático, Swipe e Expansão -->
-    <script>
-        const track = document.getElementById('carousel-track');
-        const dotsContainer = document.getElementById('carousel-dots');
-        const slides = track.children;
-        const totalSlides = slides.length;
-                
-        // Criar os pontos indicadores (Dots)
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('button');
-            dot.className = `w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#029FA9] w-3.5' : 'bg-gray-300'}`;
-            dot.setAttribute('aria-label', `Slide ${i + 1}`);
-            dot.addEventListener('click', () => {
-                track.scrollTo({
-                    left: slides[i].offsetLeft - track.offsetLeft,
-                    behavior: 'smooth'
-                });
-            });
-            dotsContainer.appendChild(dot);
-        }
-
-        const dots = dotsContainer.children;
-        // @ts-ignore
-        // Atualizar Dots Ativos Conforme Rolagem
-        track.addEventListener('scroll', () => {
-            const width = track.offsetWidth;
-            const index = Math.round(track.scrollLeft / width);
-                        
-            for (let i = 0; i < dots.length; i++) {
-                if (i === index) {
-                    dots[i].classList.add('bg-[#029FA9]', 'w-3.5');
-                    dots[i].classList.remove('bg-gray-300');
-                } else {
-                    dots[i].classList.remove('bg-[#029FA9]', 'w-3.5');
-                    dots[i].classList.add('bg-gray-300');
-                }
-            }
-        });
-
-        // Loop de Transição Suave Automática (A cada 6s) com reset de volta ao início
-        let autoSlide = setInterval(() => {
-            const width = track.offsetWidth;
-            let nextIndex = Math.round(track.scrollLeft / width) + 1;
-                        
-            // Quando os depoimentos acabam, volta suavemente ao início
-            if (nextIndex >= totalSlides) nextIndex = 0;
-                        
-            track.scrollTo({
-                left: slides[nextIndex].offsetLeft - track.offsetLeft,
-                behavior: 'smooth'
-            });
-        }, 6000);
-
-        // Resetar tempo automático ao tocar/interagir com o carrossel
-        track.addEventListener('touchstart', () => clearInterval(autoSlide), { passive: true });
-    </script>
 </body>
 </html>
