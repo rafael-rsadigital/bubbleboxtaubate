@@ -72,9 +72,21 @@
             transform: translateY(0) scale(0.98);
         }
         
-        .feature-card {
-            background: #F7F8FC;
-            border: 1px solid #E5E7EB;
+        /* Estilo dos diferenciais horizontais turquesa (idênticos em formato aos botões principais) */
+        .feature-btn {
+            background: #FFFFFF;
+            border: 2px solid #029FA9;
+            border-radius: 0.75rem;
+            color: #029FA9;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 6px rgba(2, 159, 169, 0.04);
+        }
+        .feature-btn:hover {
+            transform: translateY(-2px);
+            background: #029FA9;
+            border-color: #029FA9;
+            color: #FFFFFF;
+            box-shadow: 0 8px 20px rgba(2, 159, 169, 0.15);
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -135,14 +147,15 @@
             </a>
 
             <!-- 6. Falar no WhatsApp -->
-            <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Vim+pelo+link+da+bio+e+gostaria+de+saber+mais+sobre+a+Bubble+Box+Taubat%C3%A9." target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center">
-                <span class="text-[16px] font-bold block">Falar no WhatsApp</span>
+            <a href="https://wa.me/5512992228266?text=Ol%C3%A1%21+Vim+pelo+link+da+bio+e+gostaria+de+saber+mais+sobre+a+Bubble+Box+Taubat%C3%A9." target="_blank" rel="noopener" class="bio-btn block w-full py-4 px-6 text-center flex items-center justify-center gap-2">
+                <img src="/images/icone-whatsapp.png" alt="WhatsApp" class="w-[22px] h-[22px] object-contain shrink-0" style="width: 22px; height: 22px;">
+                <span class="text-[16px] font-bold">Falar no WhatsApp</span>
             </a>
         </div>
 
         <!-- BANNER DE DESTAQUE: SABÃO OMO E AMACIANTE COMFORT INCLUSOS -->
         <div class="mb-10">
-            <div class="w-full bg-[#1b0824] border-2 border-secondary rounded-[40px] px-6 py-5 flex items-center justify-between shadow-lg relative overflow-hidden">
+            <div class="w-full bg-primary border-2 border-secondary rounded-[40px] px-6 py-5 flex items-center justify-between shadow-lg relative overflow-hidden">
                 <!-- Sparkle / Brilho Decorativo à Esquerda -->
                 <div class="flex items-center gap-3">
                     <div class="text-secondary shrink-0">
@@ -172,41 +185,41 @@
         <div class="space-y-4 mb-10">
             <h2 class="text-2xl font-bold text-primary text-center tracking-wider mb-4">Diferenciais e Praticidade</h2>
             
-            <div class="grid grid-cols-2 gap-3">
+            <div class="flex flex-col gap-3">
                 <!-- Card 1: Estacionamento -->
-                <div class="feature-card rounded-2xl p-4 flex flex-col items-center text-center justify-between min-h-[140px] shadow-sm">
-                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-2 shrink-0">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center shrink-0">
                         <!-- SVG Estacionamento Padrão Minimalista -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Estacionamento gratuito no próprio complexo</p>
+                    <p class="text-sm font-semibold leading-tight">Estacionamento gratuito no próprio complexo</p>
                 </div>
 
                 <!-- Card 2: Capacidade -->
-                <div class="feature-card rounded-2xl p-4 flex flex-col items-center text-center justify-between min-h-[140px] shadow-sm">
-                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-2 shrink-0">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center shrink-0">
                         <!-- SVG Máquina de lavar minimalista -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="21" y1="9" x2="3" y2="9"/><circle cx="12" cy="14" r="4"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Máquinas com 12kg de capacidade</p>
+                    <p class="text-sm font-semibold leading-tight">Máquinas com 12kg de capacidade</p>
                 </div>
 
                 <!-- Card 3: Velocidade Lave -->
-                <div class="feature-card rounded-2xl p-4 flex flex-col items-center text-center justify-between min-h-[140px] shadow-sm">
-                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-2 shrink-0">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center shrink-0">
                         <!-- SVG Relógio rápido -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 15 15"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Lave suas roupas em até 30 min</p>
+                    <p class="text-sm font-semibold leading-tight">Lave suas roupas em até 30 min</p>
                 </div>
 
                 <!-- Card 4: Velocidade Seque -->
-                <div class="feature-card rounded-2xl p-4 flex flex-col items-center text-center justify-between min-h-[140px] shadow-sm">
-                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-2 shrink-0">
+                <div class="feature-btn w-full p-4 flex items-center gap-4 shadow-sm">
+                    <div class="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center shrink-0">
                         <!-- SVG Calor / Secagem -->
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Seque suas roupas em até 45 min</p>
+                    <p class="text-sm font-semibold leading-tight">Seque suas roupas em até 45 min</p>
                 </div>
             </div>
         </div>
@@ -232,8 +245,9 @@
         <p class="text-[9px] text-gray-500 uppercase tracking-[0.2em] font-medium px-4 leading-relaxed">
             Desenvolvido por 
             <a href="https://wa.me/5512988052097?text=Ol%C3%A1%21+Vi+o+site+da+Bubble+Box+Taubat%C3%A9+no+link+da+bio+e+gostaria+de+falar+sobre+solu%C3%A7%C3%B5es+de+Google+Meu+Neg%C3%B3cio." target="_blank" rel="noopener" class="font-bold text-secondary hover:underline transition-all">
-                RSA Digital | Expert em Google Meu Negócio
+                RSA Digital
             </a>
+            | Expert em Google Meu Negócio
         </p>
     </footer>
 
