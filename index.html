@@ -4,8 +4,8 @@
     <meta name="facebook-domain-verification" content="wjkwa8hgwmu8vtko1owwhhq7xq927k" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavanderia Self Service em Taubaté para Lavar e Secar Roupas | Bubble Box Taubaté</title>
-    <meta name="description" content="Lavanderia self service em Taubaté para lavar e secar roupas, edredons, cobertores e peças volumosas com rapidez, economia e máquinas industriais. Conheça a Bubble Box Taubaté.">
+    <title>Inauguração hoje: lave ou seque por R$ 1 | Bubble Box Taubaté</title>
+    <meta name="description" content="É hoje a inauguração da Bubble Box Taubaté! Lave ou seque suas roupas por apenas R$ 1. Lavanderia self-service no Centro, com máquinas industriais e funcionamento 24 horas.">
     
     <!-- Meta Robots -->
     <meta name="robots" content="index,follow,max-image-preview:large">
@@ -25,7 +25,7 @@
 
     <!-- Preload de Recursos Críticos (LCP e Renderização) -->
     <link rel="preload" as="image" href="/images/logotipo-bubble-box-taubate.png">
-    <link rel="preload" as="image" href="/images/bubblebox-home.jpg">
+    <link rel="preload" as="video" href="/images/video-inauguracao.mp4" type="video/mp4">
 
     <!-- Google Fonts - Bebas Neue (Títulos) & Poppins (Textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,8 +67,8 @@
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Bubble Box Taubaté | Lavanderia Self Service">
-    <meta property="og:description" content="Lavanderia self service em Taubaté para lavar roupas, edredons, cobertores e muito mais.">
+    <meta property="og:title" content="Inauguração hoje: lave ou seque por R$ 1 | Bubble Box Taubaté">
+    <meta property="og:description" content="Hoje é o dia da inauguração: lave ou seque suas roupas por apenas R$ 1 na Bubble Box Taubaté.">
     <meta property="og:url" content="https://bubbleboxtaubate.com.br/">
     <meta property="og:site_name" content="Bubble Box Taubaté">
     <meta property="og:image" content="https://bubbleboxtaubate.com.br/images/bubblebox-home.jpg">
@@ -285,10 +285,10 @@
         },
         {
           "@type": "Question",
-          "name": "Quando será a inauguração?",
+          "name": "Qual é a promoção de inauguração?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Estamos finalizando os últimos detalhes da unidade. Acompanhe nosso Instagram para ficar por dentro da data oficial de inauguração."
+            "text": "Hoje, no dia da inauguração, você pode lavar ou secar suas roupas por apenas R$ 1. Consulte a equipe no local para saber as condições da promoção."
           }
         }
       ]
@@ -531,6 +531,50 @@
             }
         }
 
+        /* FAIXA LUMINOSA DE INAUGURAÇÃO */
+        .launch-ticker {
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--secondary), var(--primary), var(--primary-dark));
+            background-size: 300% 100%;
+            color: #FFFFFF;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(84, 35, 96, 0.24);
+            animation: tickerGlow 6s ease-in-out infinite;
+        }
+        .launch-ticker__track {
+            display: flex;
+            width: max-content;
+            animation: tickerScroll 20s linear infinite;
+        }
+        .launch-ticker__item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.8rem 2.5rem;
+            white-space: nowrap;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.75);
+        }
+        .launch-ticker__item::before {
+            content: '✦';
+            color: var(--accent);
+            font-size: 1.25rem;
+        }
+        @keyframes tickerScroll {
+            to { transform: translateX(-50%); }
+        }
+        @keyframes tickerGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .launch-ticker, .launch-ticker__track { animation: none; }
+            .launch-ticker__track { width: 100%; justify-content: center; }
+            .launch-ticker__item:nth-child(n+2) { display: none; }
+        }
+
         /* ANIMAÇÃO VIBRANTE DE EXPECTATIVA */
         @keyframes periodic-vibrate {
             0%, 85%, 100% { transform: scale(1) rotate(0deg); }
@@ -622,6 +666,16 @@
     <!-- MAIN SECTIONS -->
     <main class="pt-20 sm:pt-24">
 
+        <!-- FAIXA DE INAUGURAÇÃO -->
+        <div class="launch-ticker" role="status" aria-label="Inauguração rolando hoje">
+            <div class="launch-ticker__track">
+                <span class="launch-ticker__item">Inauguração rolando hoje</span>
+                <span class="launch-ticker__item" aria-hidden="true">Inauguração rolando hoje</span>
+                <span class="launch-ticker__item" aria-hidden="true">Inauguração rolando hoje</span>
+                <span class="launch-ticker__item" aria-hidden="true">Inauguração rolando hoje</span>
+            </div>
+        </div>
+
         <!-- HERO SECTION -->
         <section class="py-16 md:py-24 bg-white overflow-hidden" aria-labelledby="hero-title">
             <div class="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
@@ -630,14 +684,14 @@
                     <!-- Lado Esquerdo: Conteúdo Textual -->
                     <div class="md:col-span-7 text-center md:text-left flex flex-col justify-center">
                         <div class="ds-badge mb-6 mx-auto md:mx-0 animate-vibrate">
-                            <span>Inauguração em breve</span>
+                            <span>Inauguração rolando hoje</span>
                         </div>
                         
                         <h1 id="hero-title" class="ds-h1 mb-3">Lavanderia Self Service em Taubaté | Bubble Box</h1>
-                        <p class="text-2xl font-bold text-primary mb-6">Sua nova lavanderia self-service no Centro de Taubaté.</p>
+                        <p class="text-2xl font-bold text-primary mb-6">Hoje é o dia: lave ou seque suas roupas por apenas R$ 1.</p>
                         
                         <p class="ds-body mb-8 mx-auto md:mx-0 text-text-light">
-                            A Bubble Box está chegando ao Centro de Taubaté com uma proposta simples: oferecer uma maneira rápida, prática e confortável de lavar e secar roupas utilizando máquinas industriais de alta capacidade. Estamos finalizando os últimos detalhes para oferecer uma experiência prática, moderna e confortável para cuidar das suas roupas.
+                            A Bubble Box já está funcionando no Centro de Taubaté para deixar sua rotina mais prática. E, para celebrar a inauguração, hoje você pode lavar ou secar suas roupas por apenas R$ 1. Aproveite a promoção e conheça nossas máquinas industriais de alta capacidade.
                         </p>
 
                         <!-- Botões de Ação -->
@@ -687,10 +741,10 @@
                         </div>
                     </div>
 
-                    <!-- Lado Direito: Imagem Principal -->
+                    <!-- Lado Direito: Vídeo Principal -->
                     <div class="md:col-span-5 flex justify-center items-center relative">
                         <div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full scale-90 -z-10"></div>
-                        <img src="/images/bubblebox-home.jpg" alt="Unidade de autoatendimento Bubble Box Taubaté no Centro de Taubaté" class="w-full max-w-md h-[400px] object-cover rounded-[20px] shadow-[0_10px_30px_rgba(0, 0, 0, 0.06)] ds-image transition-transform duration-300 hover:scale-[1.02]" loading="eager">
+                        <video class="w-full max-w-md h-[400px] object-cover rounded-[20px] shadow-[0_10px_30px_rgba(0, 0, 0, 0.06)] ds-image transition-transform duration-300 hover:scale-[1.02]" autoplay muted loop playsinline preload="metadata" poster="/images/bubblebox-home.jpg" aria-label="Vídeo da inauguração da Bubble Box Taubaté"><source src="/images/video-inauguracao.mp4" type="video/mp4">Seu navegador não suporta a reprodução de vídeo.</video>
                     </div>
 
                 </div>
@@ -745,16 +799,16 @@
             </div>
         </section>
 
-        <!-- SEÇÃO "EM BREVE" -->
+        <!-- SOBRE A UNIDADE -->
         <section class="py-16 md:py-24 bg-white" aria-labelledby="em-breve-title">
             <div class="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     
                     <!-- Lado Esquerdo: Texto de Expectativa -->
                     <div class="space-y-6">
-                        <h2 id="em-breve-title" class="ds-h2">A Bubble Box está chegando ao Centro de Taubaté!</h2>
+                        <h2 id="em-breve-title" class="ds-h2">A Bubble Box já está no Centro de Taubaté!</h2>
                         <p class="ds-body">
-                            Estamos preparando cada detalhe para oferecer uma experiência moderna em lavanderia self-service. Aqui você poderá lavar desde as roupas do dia a dia até peças maiores, como edredons e cobertores, utilizando máquinas industriais com produtos profissionais inclusos em cada ciclo. Além da praticidade, você encontrará um ambiente organizado, confortável e estacionamento no local para tornar sua visita ainda mais conveniente. Em breve estaremos prontos para receber você.
+                            Venha viver uma experiência moderna de lavanderia self-service. Aqui você lava desde as roupas do dia a dia até peças maiores, como edredons e cobertores, com máquinas industriais e produtos profissionais inclusos em cada ciclo. Para comemorar a inauguração, hoje você pode lavar ou secar suas roupas por apenas R$ 1. Aproveite também o ambiente organizado, confortável e o estacionamento no local.
                         </p>
                         
                         <div class="space-y-4">
@@ -1165,7 +1219,7 @@
                         <div class="inline-flex p-3 bg-primary/10 text-primary rounded-xl mb-2">
                             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         </div>
-                        <h2 id="localizacao-title" class="ds-h2">Em breve no Centro de Taubaté</h2>
+                        <h2 id="localizacao-title" class="ds-h2">Estamos no Centro de Taubaté</h2>
                         
                         <div class="bg-background-soft border border-border p-6 rounded-2xl shadow-sm space-y-4 text-left">
                             <div>
@@ -1389,12 +1443,12 @@
                         <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left focus-visible:outline" 
                                 aria-expanded="false" 
                                 aria-controls="faq-ans-11">
-                            <span class="font-bold text-primary-dark text-base sm:text-lg">Quando será a inauguração?</span>
+                            <span class="font-bold text-primary-dark text-base sm:text-lg">Qual é a promoção de inauguração?</span>
                             <svg class="w-5 h-5 text-secondary transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="faq-ans-11" class="faq-content">
                             <div class="px-6 pb-5 pt-1 ds-aux leading-relaxed">
-                                Estamos finalizando os últimos detalhes da unidade. Acompanhe nosso Instagram para ficar por dentro da data oficial de inauguração.
+                                Hoje, no dia da inauguração, você pode lavar ou secar suas roupas por apenas R$ 1. Consulte a equipe no local para saber as condições da promoção.
                             </div>
                         </div>
                     </div>
@@ -1439,9 +1493,9 @@
             <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/5 rounded-full blur-xl"></div>
             
             <div class="max-w-[800px] mx-auto px-5 sm:px-6 lg:px-10 text-center relative z-10 space-y-6">
-                <h2 id="cta-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight" style="color: #FFFFFF !important;">Estamos quase prontos para receber você.</h2>
+                <h2 id="cta-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight" style="color: #FFFFFF !important;">A inauguração é hoje. Venha aproveitar!</h2>
                 <p class="text-lg text-white/95 max-w-xl mx-auto font-normal">
-                    Se tiver qualquer dúvida sobre a nova unidade Bubble Box Taubaté, entre em contato pelo WhatsApp. Será um prazer conversar com você.
+                    Hoje, você pode lavar ou secar suas roupas por apenas R$ 1. Fale com a equipe pelo WhatsApp ou venha até a unidade Bubble Box Taubaté.
                 </p>
                 
                 <div>
