@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bubbleboxtaubate.com.br"
+        }
+      ],
+      "destination": "https://bubbleboxtaubate.com.br/:path*",
+      "permanent": true
+    }
+  ]
+}
