@@ -1,5 +1,4 @@
 User-agent: *
 
 Allow: /
-
-Sitemap: https://bubbleboxtaubate.com.br/sitemap.xml
+Sitemap: https://www.bubbleboxtaubate.com.br/sitemap.xml
