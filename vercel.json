@@ -3,11 +3,6 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/:path*",
       "has": [
         {
@@ -16,6 +11,11 @@
         }
       ],
       "destination": "https://bubbleboxtaubate.com.br/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
       "permanent": true
     }
   ]
